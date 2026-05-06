@@ -13,15 +13,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background: #020617;
   color: white;
-  overflow-x: hidden;
 }
 
-/* 🌠 STAR BACKGROUND */
+/* 🌠 BINTANG */
 .stars {
   position: fixed;
   width: 100%;
@@ -42,8 +42,7 @@ body {
     600px 250px white,
     800px 400px white,
     1000px 200px white,
-    1200px 500px white,
-    1400px 350px white;
+    1200px 500px white;
   animation: animStar 20s linear infinite;
 }
 
@@ -56,15 +55,11 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 20px 40px;
   position: sticky;
   top: 0;
   background: rgba(0,0,0,0.3);
   backdrop-filter: blur(10px);
-}
-
-nav h2 {
-  color: #38bdf8;
 }
 
 nav a {
@@ -73,12 +68,13 @@ nav a {
   text-decoration: none;
 }
 
-/* HERO */
-.hero {
+/* SECTION */
+section {
+  padding: 80px 20px;
   text-align: center;
-  padding: 120px 20px;
 }
 
+/* HERO */
 .hero h1 {
   font-size: 45px;
 }
@@ -87,16 +83,7 @@ nav a {
   color: #38bdf8;
 }
 
-.hero p {
-  opacity: 0.7;
-}
-
-/* SECTION */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
+/* CARD */
 .container {
   display: flex;
   justify-content: center;
@@ -104,13 +91,11 @@ nav a {
   gap: 20px;
 }
 
-/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 15px;
-  width: 230px;
-  backdrop-filter: blur(10px);
+  width: 220px;
   transition: 0.3s;
 }
 
@@ -122,19 +107,11 @@ nav a {
 .card img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 .role {
-  font-size: 13px;
   opacity: 0.6;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.5;
+  font-size: 13px;
 }
 </style>
 
@@ -148,20 +125,20 @@ footer {
 <nav>
   <h2>BINTANG</h2>
   <div>
-    <a href="#">Home</a>
-    <a href="#">Staff</a>
-    <a href="#">Idol</a>
+    <a href="#home">Home</a>
+    <a href="#staff">Staff</a>
+    <a href="#idol">Idol</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<!-- HOME -->
+<section id="home" class="hero">
   <h1>🌌 <span>BINTANG</span> ENTERTAINMENT</h1>
   <p>"Shining Behind The Scene"</p>
 </section>
 
 <!-- STAFF -->
-<section class="section">
+<section id="staff">
   <h2>🛠️ Official Staff</h2>
 
   <div class="container">
@@ -184,17 +161,11 @@ footer {
       <p class="role">Manager</p>
     </div>
 
-    <div class="card">
-      <img src="https://i.imgur.com/jQ9XGQx.jpg">
-      <h3>Ahsya</h3>
-      <p class="role">Manager</p>
-    </div>
-
   </div>
 </section>
 
 <!-- IDOL -->
-<section class="section">
+<section id="idol">
   <h2>🎤 Idol Members</h2>
 
   <div class="container">
@@ -205,19 +176,8 @@ footer {
       <p class="role">Trainee</p>
     </div>
 
-    <div class="card">
-      <img src="https://i.imgur.com/3ZQ3Z9r.jpg">
-      <h3>Coming Soon</h3>
-      <p class="role">Trainee</p>
-    </div>
-
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Bintang Entertainment
-</footer>
 
 </body>
 </html>
