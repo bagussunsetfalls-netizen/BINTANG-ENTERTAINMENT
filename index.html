@@ -16,18 +16,75 @@
 }
 
 body {
-  background: linear-gradient(135deg, #020617, #0f172a);
+  background: #020617;
   color: white;
+  overflow-x: hidden;
+}
+
+/* 🌠 STAR BACKGROUND */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    50px 100px white,
+    200px 300px white,
+    400px 150px white,
+    600px 250px white,
+    800px 400px white,
+    1000px 200px white,
+    1200px 500px white,
+    1400px 350px white;
+  animation: animStar 20s linear infinite;
+}
+
+@keyframes animStar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+
+nav h2 {
+  color: #38bdf8;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 45px;
+}
+
+.hero span {
+  color: #38bdf8;
 }
 
 .hero p {
@@ -36,15 +93,10 @@ body {
 
 /* SECTION */
 .section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.section h2 {
-  margin-bottom: 30px;
-}
-
-/* CARD */
 .container {
   display: flex;
   justify-content: center;
@@ -52,17 +104,19 @@ body {
   gap: 20px;
 }
 
+/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 15px;
-  width: 220px;
+  width: 230px;
   backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #38bdf8;
 }
 
 .card img {
@@ -75,15 +129,34 @@ body {
   font-size: 13px;
   opacity: 0.6;
 }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.5;
+}
 </style>
 
 </head>
 
 <body>
 
+<div class="stars"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>BINTANG</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Staff</a>
+    <a href="#">Idol</a>
+  </div>
+</nav>
+
 <!-- HERO -->
 <section class="hero">
-  <h1>🌌 BINTANG ENTERTAINMENT</h1>
+  <h1>🌌 <span>BINTANG</span> ENTERTAINMENT</h1>
   <p>"Shining Behind The Scene"</p>
 </section>
 
@@ -140,6 +213,11 @@ body {
 
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Bintang Entertainment
+</footer>
 
 </body>
 </html>
